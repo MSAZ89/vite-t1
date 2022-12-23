@@ -3,13 +3,11 @@ import data from '../src/data/data.json'
 
 const allData = data.map((item) => {
   return (
-    <div className='bg-slate-100 p-2'>
-      <h2>{item.name}</h2>
+    <div key={item.name} className='bg-slate-100 p-2 border-b'>
+      <h2 className='text-lg font-bold'>{item.name}</h2>
       {item.favorites.map((favorite) => {
         return (
-          <>
-            <h3>{favorite.name}</h3>
-          </>
+            <div key={favorite.name}>{favorite.name}</div>
         )
       })
       }
