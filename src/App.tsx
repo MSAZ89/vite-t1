@@ -58,7 +58,7 @@ function App() {
         className={
           "w-60 mx-auto p-2 h-auto bg-slate-50 transition-all" +
           (person.name === selectedPerson.name
-            ? " bg-slate-500 text-white w-64 scale-105 font-bold"
+            ? " bg-slate-900 text-white w-64 scale-105 font-bold outline"
             : "")
         }
       >
@@ -69,7 +69,7 @@ function App() {
 
   return (
     <>
-      <div className="text-center grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 w-full gap-4 p-4 bg-black">
+      <div className="text-center grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 w-full gap-2 p-2 bg-slate-900">
         {peopleMap}
       </div>
 
