@@ -72,7 +72,7 @@ export default function FetchAPI() {
         </p>
       </div>
 
-      <div className="p-4 grid grid-cols-2 gap-2">
+      <div className="p-4 grid md:grid-cols-2 gap-2">
         {!isDisabled() ? (
           // map over data and display it here, filter results out where the name is empty
           data
@@ -80,45 +80,43 @@ export default function FetchAPI() {
             .map((item, index) => (
               <div
                 key={item.url}
-                className="p-4 rounded bg-slate-100 shadow-md select-none"
+                className="p-4 rounded shadow-md select-none w-full"
               >
-                <details className="hover:cursor-pointer">
+                <details className="hover:cursor-pointer w-full">
                   <summary>
                     {" "}
                     {item.name !== "" ? (
-                      <h1 className="text-2xl font-semibold">{item.name} </h1>
+                      <h2 className="text-xl font-bold mb-2 tracking-wider">
+                        {item.name}
+                      </h2>
                     ) : (
                       <h1 className="text-xl font-bold">No Name</h1>
                     )}
                   </summary>
                   <motion.div
                     animate={{
-                      x: 0,
-                      backgroundColor: "#fff",
-                      borderRadius: "10px",
-                      boxShadow: "8px 8px 16px rgba(0, 0, 0, 0.25)",
+                      padding: "1rem",
+                      width: "auto",
                       position: "absolute",
-                      width: "33%",
-                      padding: "2rem",
-                      margin: "2rem",
-                      border: "1px solid #ccc",
-                      scale: 1.1,
+                      backgroundColor: "white",
+                      borderRadius: "0.5rem",
+                      boxShadow: "0 0 0.5rem 0.5rem rgba(0,0,0,0.1)",
+                      scale: 1.2,
                     }}
                   >
-                    <h2 className="text-2xl font-bold mb-2 tracking-wider">
-                      <a
-                        target={"_blank"}
-                        rel="noreferrer"
-                        href={
-                          "https://www.google.com/search?q=" +
-                          item.name +
-                          " Game Of Thrones"
-                        }
-                      >
-                        {item.name}
-                      </a>
-                    </h2>
-                    <p className="mb-4">
+                    <a
+                      target={"_blank"}
+                      rel="noreferrer"
+                      className="font-bold"
+                      href={
+                        "https://www.google.com/search?q=" +
+                        item.name +
+                        " Game Of Thrones"
+                      }
+                    >
+                      {item.name}
+                    </a>
+                    <p className="my-4">
                       <span className="font-bold">Gender:</span>
                       {item.gender != "" ? item.gender : null}
                     </p>
