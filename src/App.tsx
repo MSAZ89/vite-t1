@@ -75,7 +75,7 @@ function App() {
 
       <div
         className={
-          "text-center transition-all p-4 m-4 shadow-md h-screen flex flex-col items-center justify-center " +
+          "text-center transition-all p-4 shadow-md h-screen flex flex-col items-center justify-center " +
           selectedPerson.bgColor
         }
       >
