@@ -25,7 +25,7 @@ function App() {
       name: "Jack",
       age: 22,
       bgColor: "bg-orange-50",
-      headShot: "https://picsum.photos/200/302",
+      headShot: "https://picsum.photos/201/302",
     },
     {
       name: "Jillian",
@@ -37,7 +37,7 @@ function App() {
       name: "Jenn",
       age: 24,
       bgColor: "bg-purple-50",
-      headShot: "https://picsum.photos/202/300",
+      headShot: "https://picsum.photos/201/301",
     },
   ];
 
@@ -81,15 +81,15 @@ function App() {
       >
         <div className="lg:flex lg:items-end justify-center gap-8 lg:text-right">
           <div>
-            <h2 className="text-xl">
+            <h2 className="text-xl font-bold">
               {selectedPerson.name != "" ? selectedPerson.name : "No Name"}
             </h2>
-            <h2 className="text-xl">{selectedPerson.age}</h2>
+            <h2 className="text-xl">{selectedPerson.age} years old</h2>
           </div>
           <img
             src={selectedPerson.headShot}
-            alt="headshot"
-            className="w-auto h-auto rounded-full object-cover"
+            alt="missing headshot image"
+            className="w-auto h-auto rounded-full object-cover transition-all hover:scale-150 transform duration-300 ease-in-out hover:shadow-2xl hover:rotate-2 rotate-0 lg:mb-0 hover:mt-20 lg:hover:ml-16"
           />
         </div>
       </div>
