@@ -53,7 +53,8 @@ function App() {
   const peopleMap = people.map((person) => {
     return (
       <button
-        onClick={() => setSelected(person)}
+        onMouseOver={() => setSelected(person)}
+        onFocus={() => setSelected(person)}
         key={person.name}
         className={
           "w-60 mx-auto p-2 h-auto bg-slate-50 transition-all" +
